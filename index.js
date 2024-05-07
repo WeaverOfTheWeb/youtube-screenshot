@@ -38,7 +38,7 @@ async function takeScreenshot(videoUrl, timestampInSeconds, outputPath, filename
             throw new Error('Requested timestamp is beyond the video duration.');
         }
         const timeFormat = secondsToTimeFormat(timestampInSeconds)
-        const videoStream = ytdl(videoUrl, { quality: 'highest' });
+        const videoStream = ytdl(videoUrl, { quality: 'highestvideo' });
         await screenshot(videoStream, timeFormat, outputPath, filename);
     } catch (error) {
         throw error;
